@@ -1,0 +1,26 @@
+.footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 209px;
+    background-color: var(--black);
+    padding: 30px;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+    }
+
+    &-logo {
+        width: 122px;
+        margin: 30px;
+    }
+
+    & p {
+        font-size: 24px;
+    }
+}

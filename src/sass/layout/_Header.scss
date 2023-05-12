@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 60px 0;
+
+    & ul {
+        display: flex;
+    }
+
+    & li {
+        list-style-type: none;
+
+        &:nth-child(2) {
+            margin-left: 60px;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--pink);
+        font-size: 24px;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    & .active {
+        text-decoration: underline;
+    }
+}
