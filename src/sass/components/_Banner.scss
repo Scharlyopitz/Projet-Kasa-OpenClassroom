@@ -8,6 +8,11 @@
     justify-content: center;
     border-radius: 25px;
     overflow: hidden;
+    margin: var(--margin);
+
+    &-container {
+        padding: var(--padding);
+    }
 
     & img {
         width: 100%;

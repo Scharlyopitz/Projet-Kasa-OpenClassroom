@@ -2,6 +2,7 @@ import Collapse from "../components/Collapse";
 import Banner from "../components/Banner";
 import image from "../assets/apropos.png";
 import Footer from "../components/Footer";
+import TitlePage from "../components/TitlePage";
 
 const items = [
     {
@@ -31,8 +32,11 @@ const items = [
 export default function About() {
     const title = null;
 
+    const titleAboutPage = `About`;
+
     return (
         <>
+            <TitlePage title={titleAboutPage} />
             <Banner image={image} title={title} />
             {items.map((item) => {
                 return (

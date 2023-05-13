@@ -1,3 +1,66 @@
-.appartement {
-    color: black;
+.information {
+    color: var(--pink);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+
+    &-appartement-title {
+        font-weight: 500;
+        font-size: 36px;
+    }
+
+    &-appartement-location {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    &-appartement-tag {
+        font-size: 14px;
+        color: white;
+        background-color: var(--pink);
+        border-radius: 10px;
+        min-width: 115px;
+        padding: 0 20px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+
+        &-container {
+            margin: 20px 0;
+            display: flex;
+        }
+    }
+}
+
+.host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-information-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-information-name {
+        display: flex;
+        align-items: center;
+        text-align: end;
+        width: 50%;
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    &-information-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}
+
+.appartement-collapse-container {
+    padding: var(--padding);
+    display: flex;
 }
