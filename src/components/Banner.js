@@ -1,6 +1,4 @@
-export default function Banner(props) {
-    const image = props.image;
-    const title = props.title;
+export default function Banner({ image, title }) {
     return (
         <div className="banner-container">
             <div className="banner">
