@@ -149,6 +149,60 @@ body {
   transition: 0.2s;
 }
 
+.starRating-container {
+  font-size: 24px;
+  gap: 15px;
+  display: flex;
+}
+
+.grey-star {
+  color: #e3e3e3;
+}
+
+.carrousel {
+  position: relative;
+  display: flex;
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: var(--padding);
+}
+.carrousel-arrow-left, .carrousel-arrow-right {
+  position: absolute;
+  top: 50%;
+  font-size: 74px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carrousel-arrow-left {
+  left: 20px;
+}
+.carrousel-arrow-right {
+  right: 20px;
+}
+.carrousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  mix-blend-mode: normal;
+}
+.carrousel-slide-number {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+}
+
+.carrouselOff {
+  display: none;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -226,6 +280,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: var(--padding);
+  margin-top: 25px;
 }
 .information-appartement-title {
   font-weight: 500;

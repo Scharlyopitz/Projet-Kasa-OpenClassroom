@@ -3,7 +3,8 @@ import Footer from "../components/Footer";
 import TitlePage from "../components/TitlePage";
 import Error from "./Error";
 import Collapse from "../components/Collapse";
-
+import StarRating from "../components/StarRating";
+import Carrousel from "../components/Carrousel";
 import { useParams } from "react-router-dom";
 
 export default function Logement() {
@@ -24,6 +25,7 @@ export default function Logement() {
     return (
         <>
             <TitlePage title={titleLogementPage} />
+            <Carrousel pictures={item.pictures} />
             <div className="information">
                 <div className="information-appartement">
                     <h1 className="information-appartement-title">
@@ -55,7 +57,7 @@ export default function Logement() {
                         />
                     </div>
                     <div className="host-rating">
-                        <div className="host-rating-star">{item.rating}</div>
+                        <StarRating rating={item.rating} />
                     </div>
                 </div>
             </div>
