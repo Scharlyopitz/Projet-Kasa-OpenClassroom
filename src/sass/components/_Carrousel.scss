@@ -40,6 +40,23 @@
         transform: translateX(-50%);
         font-size: 18px;
     }
+
+    @media (max-width: 768px) {
+        margin: var(--padding-query);
+    }
+
+    @media (max-width: 540px) {
+        height: 255px;
+
+        &-arrow-left,
+        &-arrow-right {
+            font-size: 18px;
+        }
+
+        & p {
+            display: none;
+        }
+    }
 }
 
 .carrouselOff {

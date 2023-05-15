@@ -27,18 +27,16 @@ export default function Logement() {
             <TitlePage title={titleLogementPage} />
             <Carrousel pictures={item.pictures} />
             <div className="information">
-                <div className="information-appartement">
-                    <h1 className="information-appartement-title">
-                        {item.title}
-                    </h1>
-                    <p className="information-appartement-location">
+                <div className="information-logement">
+                    <h1 className="information-logement-title">{item.title}</h1>
+                    <p className="information-logement-location">
                         {item.location}
                     </p>
-                    <div className="information-appartement-tag-container">
+                    <div className="information-logement-tag-container">
                         {item.tags.map((tag, index) => (
                             <p
                                 key={`${item.id}-${index}`}
-                                className="information-appartement-tag"
+                                className="information-logement-tag"
                             >
                                 {tag}
                             </p>
@@ -61,7 +59,7 @@ export default function Logement() {
                     </div>
                 </div>
             </div>
-            <div className="appartement-collapse-container">
+            <div className="logement-collapse-container">
                 <Collapse title="Description" texte={item.description} />
                 <Collapse title="Équipements" texte={item.equipments} />
             </div>
