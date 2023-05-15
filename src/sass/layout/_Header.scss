@@ -7,14 +7,11 @@
 
     & ul {
         display: flex;
+        gap: 60px;
     }
 
     & li {
         list-style-type: none;
-
-        &:nth-child(2) {
-            margin-left: 60px;
-        }
     }
 
     & a {
@@ -30,5 +27,24 @@
 
     & .active {
         text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        margin: 20px 0;
+        padding: var(--padding-query);
+    }
+
+    @media (max-width: 540px) {
+        & img {
+            width: 145px;
+        }
+
+        & a {
+            font-size: 12px;
+        }
+
+        & ul {
+            gap: 10px;
+        }
     }
 }

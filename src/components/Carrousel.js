@@ -3,8 +3,6 @@ import { useState } from "react";
 export default function Carrousel({ pictures }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const [carrouselOff, setCarrouselOff] = useState(false);
-
     const nextSlide = () => {
         setCurrentSlide(
             currentSlide === pictures.length - 1 ? 0 : currentSlide + 1

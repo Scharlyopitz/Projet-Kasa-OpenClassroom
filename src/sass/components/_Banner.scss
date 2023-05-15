@@ -33,5 +33,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 16px;
+    }
+
+    @media (max-width: 768px) {
+        &-container {
+            padding: var(--padding-query);
+        }
+    }
+
+    @media (max-width: 540px) {
+        height: 111px;
+
+        &-container {
+            padding: var(--padding-query);
+        }
+
+        & p {
+            font-size: 24px;
+            padding-right: 80px;
+        }
     }
 }

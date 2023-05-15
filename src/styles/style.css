@@ -45,24 +45,55 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 16px;
+}
+@media (max-width: 768px) {
+  .banner-container {
+    padding: var(--padding-query);
+  }
+}
+@media (max-width: 540px) {
+  .banner {
+    height: 111px;
+  }
+  .banner-container {
+    padding: var(--padding-query);
+  }
+  .banner p {
+    font-size: 24px;
+    padding-right: 80px;
+  }
 }
 
 .cards-container {
   background-color: var(--grey);
   border-radius: 25px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   grid-column-gap: 60px;
   grid-row-gap: 50px;
   padding: 56px 50px;
   margin: 40px 100px;
 }
+@media (max-width: 768px) {
+  .cards-container {
+    margin: 20px 20px;
+    grid-row-gap: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .cards-container {
+    background-color: transparent;
+    padding: 0;
+  }
+}
 
 .card {
   position: relative;
   overflow: hidden;
+  max-width: 340px;
   width: 100%;
+  margin: auto;
   height: 340px;
   background-color: var(--pink);
   border-radius: 10px;
@@ -103,15 +134,23 @@ body {
   bottom: 0%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
+@media (max-width: 540px) {
+  .card {
+    height: 255px;
+  }
+}
 
 .collapse {
   font-size: 24px;
+  max-width: 1023px;
+  margin: auto;
 }
 .collapse-container {
   display: flex;
   flex-direction: column;
-  max-width: 1023px;
-  margin: 30px auto;
+  gap: 30px;
+  margin: 30px 0;
+  padding: 0 100px;
 }
 .collapse-title {
   display: flex;
@@ -135,13 +174,43 @@ body {
   background-color: var(--grey);
   color: var(--pink);
   border-radius: 0 0 5px 5px;
+  z-index: -2;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
 }
 .collapse i {
   transition: 0.2s;
 }
+@media (max-width: 768px) {
+  .collapse-container {
+    padding: var(--padding-query);
+  }
+}
+@media (max-width: 540px) {
+  .collapse-container {
+    padding: var(--padding-query);
+    margin: 20px auto;
+    gap: 20px;
+  }
+  .collapse-title {
+    height: 30px;
+  }
+  .collapse-title h3 {
+    font-size: 13px;
+  }
+  .collapse i {
+    font-size: 20px;
+  }
+  .collapse p {
+    font-size: 12px;
+  }
+}
 
 .hide {
-  display: none;
+  transform: translateY(-400px);
+  height: 0;
+  padding: 0 !important;
 }
 
 .turn {
@@ -153,6 +222,7 @@ body {
   font-size: 24px;
   gap: 15px;
   display: flex;
+  margin-bottom: 19px;
 }
 
 .grey-star {
@@ -212,12 +282,10 @@ body {
 }
 .header ul {
   display: flex;
+  gap: 60px;
 }
 .header li {
   list-style-type: none;
-}
-.header li:nth-child(2) {
-  margin-left: 60px;
 }
 .header a {
   text-decoration: none;
@@ -230,6 +298,23 @@ body {
 }
 .header .active {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .header {
+    margin: 20px 0;
+    padding: var(--padding-query);
+  }
+}
+@media (max-width: 540px) {
+  .header img {
+    width: 145px;
+  }
+  .header a {
+    font-size: 12px;
+  }
+  .header ul {
+    gap: 10px;
+  }
 }
 
 .footer {
@@ -253,6 +338,14 @@ body {
 .footer p {
   font-size: 24px;
 }
+@media (max-width: 540px) {
+  .footer p {
+    font-size: 12px;
+  }
+  .footer .container {
+    justify-content: center;
+  }
+}
 
 .error {
   color: var(--pink);
@@ -264,15 +357,43 @@ body {
 }
 .error-number {
   font-weight: 700;
-  font-size: clamp(96px, 20vw, 288px);
+  font-size: 288px;
 }
 .error-message {
-  font-size: clamp(18px, 3vw, 36px);
+  font-size: 36px;
   margin: 66px 0 180px 0;
 }
 .error-link {
   color: var(--pink);
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .error {
+    margin-top: 140px;
+  }
+  .error-number {
+    font-size: 200px;
+  }
+  .error-message {
+    font-size: 30px;
+    margin: 66px 25px 180px;
+  }
+}
+@media (max-width: 540px) {
+  .error {
+    margin-top: 180px;
+    padding: 0 60px;
+  }
+  .error-number {
+    font-size: 96px;
+  }
+  .error-message {
+    font-size: 18px;
+    margin: 10px 0 130px;
+  }
+  .error-link {
+    font-size: 14px;
+  }
 }
 
 .information {
@@ -312,6 +433,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
 }
 .host-information-container {
   display: flex;
@@ -342,4 +464,5 @@ body {
   --grey: #f7f7f7;
   --black: #000000;
   --padding: 0 100px;
+  --padding-query: 0 20px;
 }/*# sourceMappingURL=style.css.map */

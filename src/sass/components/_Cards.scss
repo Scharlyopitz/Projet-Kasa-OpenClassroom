@@ -1,11 +1,21 @@
 .cards-container {
     background-color: var(--grey);
     border-radius: 25px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     grid-column-gap: 60px;
     grid-row-gap: 50px;
     padding: 56px 50px;
     margin: 40px 100px;
+
+    @media (max-width: 768px) {
+        margin: 20px 20px;
+
+        grid-row-gap: 20px;
+    }
+
+    @media (max-width: 540px) {
+        background-color: transparent;
+        padding: 0;
+    }
 }

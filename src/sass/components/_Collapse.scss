@@ -1,11 +1,14 @@
 .collapse {
     font-size: 24px;
+    max-width: 1023px;
+    margin: auto;
 
     &-container {
         display: flex;
         flex-direction: column;
-        max-width: 1023px;
-        margin: 30px auto;
+        gap: 30px;
+        margin: 30px 0;
+        padding: 0 100px;
     }
 
     &-title {
@@ -30,21 +33,56 @@
 
     & p {
         padding: 30px 30px 20px 20px;
-
         background-color: var(--grey);
         color: var(--pink);
         border-radius: 0 0 5px 5px;
+        z-index: -2;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
     }
 
     & i {
         transition: 0.2s;
+    }
+
+    @media (max-width: 768px) {
+        &-container {
+            padding: var(--padding-query);
+        }
+    }
+
+    @media (max-width: 540px) {
+        &-container {
+            padding: var(--padding-query);
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        &-title {
+            height: 30px;
+        }
+
+        &-title h3 {
+            font-size: 13px;
+        }
+
+        & i {
+            font-size: 20px;
+        }
+
+        & p {
+            font-size: 12px;
+        }
     }
 }
 
 // Class pour la fermeture de la description
 
 .hide {
-    display: none;
+    transform: translateY(-400px);
+    height: 0;
+    padding: 0 !important;
 }
 
 // Class pour le style de la fleche à la fermeture de la description

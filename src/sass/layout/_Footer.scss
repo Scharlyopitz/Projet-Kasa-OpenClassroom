@@ -21,4 +21,13 @@
     & p {
         font-size: 24px;
     }
+
+    @media (max-width: 540px) {
+        & p {
+            font-size: 12px;
+        }
+        & .container {
+            justify-content: center;
+        }
+    }
 }

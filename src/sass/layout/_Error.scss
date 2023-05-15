@@ -8,16 +8,47 @@
 
     &-number {
         font-weight: 700;
-        font-size: clamp(96px, 20vw, 288px);
+        font-size: 288px;
     }
 
     &-message {
-        font-size: clamp(18px, 3vw, 36px);
+        font-size: 36px;
         margin: 66px 0 180px 0;
     }
 
     &-link {
         color: var(--pink);
-        font-size: clamp(14px, 2vw, 18px);
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 140px;
+
+        &-number {
+            font-size: 200px;
+        }
+
+        &-message {
+            font-size: 30px;
+            margin: 66px 25px 180px;
+        }
+    }
+
+    @media (max-width: 540px) {
+        margin-top: 180px;
+        padding: 0 60px;
+
+        &-number {
+            font-size: 96px;
+        }
+
+        &-message {
+            font-size: 18px;
+            margin: 10px 0 130px;
+        }
+
+        &-link {
+            font-size: 14px;
+        }
     }
 }
