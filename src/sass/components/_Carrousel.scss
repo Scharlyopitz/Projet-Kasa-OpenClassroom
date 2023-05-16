@@ -5,6 +5,7 @@
     border-radius: 25px;
     overflow: hidden;
     margin: var(--padding);
+    z-index: 0;
 
     &-arrow-left,
     &-arrow-right {

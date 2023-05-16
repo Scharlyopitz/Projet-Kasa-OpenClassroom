@@ -5,10 +5,20 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  height: 100%;
   font-family: "Montserrat", sans-serif;
   background-color: var(--background);
   color: white;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 .banner {
@@ -169,6 +179,11 @@ body {
   width: 100%;
   margin-bottom: 20px;
 }
+.collapse-logement:nth-child(2) p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .collapse-container {
   display: flex;
   flex-direction: column;
@@ -186,6 +201,8 @@ body {
   border-radius: 5px;
   transform: translateY(5px);
   cursor: pointer;
+  z-index: 2;
+  position: relative;
 }
 .collapse-title h3 {
   font-weight: 500;
@@ -201,6 +218,8 @@ body {
   border-radius: 5px;
   transform: translateY(5px);
   cursor: pointer;
+  z-index: 2;
+  position: relative;
 }
 .collapse-title-logement h3 {
   font-weight: 500;
@@ -217,7 +236,6 @@ body {
   background-color: var(--grey);
   color: var(--pink);
   border-radius: 0 0 5px 5px;
-  z-index: -2;
   position: relative;
   overflow: hidden;
   transition: 0.3s;
@@ -232,7 +250,6 @@ body {
   background-color: var(--grey);
   color: var(--pink);
   border-radius: 0 0 5px 5px;
-  z-index: -2;
   position: relative;
   overflow: hidden;
   transition: 0.3s;
@@ -319,6 +336,7 @@ body {
   border-radius: 25px;
   overflow: hidden;
   margin: var(--padding);
+  z-index: 0;
 }
 .carrousel-arrow-left, .carrousel-arrow-right {
   position: absolute;
@@ -444,6 +462,10 @@ body {
   .footer .container {
     justify-content: center;
   }
+}
+
+main {
+  flex-grow: 1;
 }
 
 .error {

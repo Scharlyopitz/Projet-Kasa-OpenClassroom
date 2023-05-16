@@ -37,19 +37,21 @@ export default function About() {
     return (
         <>
             <TitlePage title={titleAboutPage} />
-            <Banner image={image} title={title} />
-            <div className="collapse-container">
-                {items.map((item) => {
-                    return (
-                        <Collapse
-                            key={item.id}
-                            title={item.title}
-                            texte={item.texte}
-                            id={item.id}
-                        />
-                    );
-                })}
-            </div>
+            <main>
+                <Banner image={image} title={title} />
+                <div className="collapse-container">
+                    {items.map((item) => {
+                        return (
+                            <Collapse
+                                key={item.id}
+                                title={item.title}
+                                texte={item.texte}
+                                id={item.id}
+                            />
+                        );
+                    })}
+                </div>
+            </main>
             <Footer />
         </>
     );

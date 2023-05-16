@@ -25,44 +25,53 @@ export default function Logement() {
     return (
         <>
             <TitlePage title={titleLogementPage} />
-            <Carrousel pictures={item.pictures} />
-            <div className="information">
-                <div className="information-logement">
-                    <h1 className="information-logement-title">{item.title}</h1>
-                    <p className="information-logement-location">
-                        {item.location}
-                    </p>
-                    <div className="information-logement-tag-container">
-                        {item.tags.map((tag, index) => (
-                            <p
-                                key={`${item.id}-${index}`}
-                                className="information-logement-tag"
-                            >
-                                {tag}
-                            </p>
-                        ))}
-                    </div>
-                </div>
-                <div className="host">
-                    <div className="host-information-container">
-                        <p className="host-information-name">
-                            {item.host.name}
+            <main>
+                <Carrousel pictures={item.pictures} />
+                <div className="information">
+                    <div className="information-logement">
+                        <h1 className="information-logement-title">
+                            {item.title}
+                        </h1>
+                        <p className="information-logement-location">
+                            {item.location}
                         </p>
-                        <img
-                            className="host-information-picture"
-                            src={item.host.picture}
-                            alt="Photo du propriétaire"
-                        />
+                        <div className="information-logement-tag-container">
+                            {item.tags.map((tag, index) => (
+                                <p
+                                    key={`${item.id}-${index}`}
+                                    className="information-logement-tag"
+                                >
+                                    {tag}
+                                </p>
+                            ))}
+                        </div>
                     </div>
-                    <div className="host-rating">
-                        <StarRating rating={item.rating} />
+                    <div className="host">
+                        <div className="host-information-container">
+                            <p className="host-information-name">
+                                {item.host.name}
+                            </p>
+                            <img
+                                className="host-information-picture"
+                                src={item.host.picture}
+                                alt="Photo du propriétaire"
+                            />
+                        </div>
+                        <div className="host-rating">
+                            <StarRating rating={item.rating} />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="logement-collapse-container">
-                <Collapse title="Description" texte={item.description} />
-                <Collapse title="Équipements" texte={item.equipments} />
-            </div>
+                <div className="logement-collapse-container">
+                    <Collapse title="Description" texte={item.description} />
+                    <Collapse
+                        title="Équipements"
+                        texte={item.equipments.map((equipment) => (
+                            <span>{equipment}</span>
+                        ))}
+                    />
+                </div>
+            </main>
             <Footer />
         </>
     );
