@@ -4,9 +4,11 @@
     display: flex;
     margin-bottom: 19px;
 
+    // -- Media Querys --
     @media (max-width: 540px) {
         font-size: 13px;
         margin-bottom: 0;
+        gap: 6px;
     }
 }
 

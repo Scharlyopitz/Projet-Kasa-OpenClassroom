@@ -17,7 +17,6 @@ export default function Collapse({ title, texte, id }) {
     });
 
     // Ajout des class si ouvert ou fermé
-
     let toggleDescription = isOpen ? null : "hide";
 
     let turnArrow = isOpen ? null : "turn";

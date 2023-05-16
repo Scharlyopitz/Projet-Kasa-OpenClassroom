@@ -36,6 +36,7 @@
         }
     }
 
+    // -- Media Querys --
     @media (max-width: 768px) {
         padding: var(--padding-query);
     }
@@ -93,6 +94,7 @@
         border-radius: 50%;
     }
 
+    // -- Media Querys --
     @media (max-width: 540px) {
         flex-direction: row-reverse;
         align-items: unset;
@@ -119,4 +121,10 @@
     padding: var(--padding);
     display: flex;
     gap: 75px;
+
+    @media (max-width: 768px) {
+        padding: var(--padding-query);
+        flex-direction: column;
+        gap: 0;
+    }
 }

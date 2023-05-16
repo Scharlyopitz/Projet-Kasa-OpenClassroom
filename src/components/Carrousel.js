@@ -3,18 +3,21 @@ import { useState } from "react";
 export default function Carrousel({ pictures }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    // Variable pour la slide suivante
     const nextSlide = () => {
         setCurrentSlide(
             currentSlide === pictures.length - 1 ? 0 : currentSlide + 1
         );
     };
 
+    // Variable pour la slide précédente
     const previousSlide = () => {
         setCurrentSlide(
             currentSlide === 0 ? pictures.length - 1 : currentSlide - 1
         );
     };
 
+    // Variable pour enlever les flèche et le nombre de slides si il n'y à que 1 photo
     const Off = pictures.length === 1 ? "carrouselOff" : null;
 
     return (
