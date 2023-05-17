@@ -66,8 +66,8 @@ export default function Logement() {
                     <Collapse title="Description" texte={item.description} />
                     <Collapse
                         title="Équipements"
-                        texte={item.equipments.map((equipment) => (
-                            <span>{equipment}</span>
+                        texte={item.equipments.map((equipment, index) => (
+                            <span key={index}>{equipment}</span>
                         ))}
                     />
                 </div>
