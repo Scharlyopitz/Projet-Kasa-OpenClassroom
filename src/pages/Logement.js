@@ -14,13 +14,13 @@ export default function Logement() {
     // Recherche des items = à l'ID de la page
     const item = logements.find((logement) => logement.id === id);
 
-    // Paramètre du nom de la page
-    const titleLogementPage = `Logement`;
-
     // Redirection vers la page d'erreur si l'id est incrorrect
     if (!item) {
         return <Error />;
     }
+
+    // Paramètre du nom de la page
+    const titleLogementPage = `${item.title}`;
 
     return (
         <>

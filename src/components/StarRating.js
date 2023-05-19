@@ -8,11 +8,11 @@ export default function StarRating({ rating }) {
                     <span key={index}>
                         <i className="fa-solid fa-star"></i>
                     </span>
-                ) : rating < value ? (
+                ) : (
                     <span key={index}>
                         <i className="fa-solid fa-star grey-star"></i>
                     </span>
-                ) : null
+                )
             )}
         </div>
     );

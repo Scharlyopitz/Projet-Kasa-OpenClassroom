@@ -15,7 +15,7 @@ export default function Header() {
             <ul>
                 <li>
                     <NavLink to="/" onClick={goToTop}>
-                        Acceuil
+                        Accueil
                     </NavLink>
                 </li>
                 <li>

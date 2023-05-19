@@ -18,12 +18,12 @@ export default function Carrousel({ pictures }) {
     };
 
     // Variable pour enlever les flèche et le nombre de slides si il n'y à que 1 photo
-    const Off = pictures.length === 1 ? "carrouselOff" : null;
+    const off = pictures.length === 1 ? "carrouselOff" : null;
 
     return (
         <div className="carrousel">
             <span
-                className={`carrousel-arrow-left ${Off}`}
+                className={`carrousel-arrow-left ${off}`}
                 onClick={previousSlide}
             >
                 <i className="fa-solid fa-chevron-left"></i>
@@ -36,13 +36,13 @@ export default function Carrousel({ pictures }) {
                 </div>
             ))}
             <span
-                className={`carrousel-arrow-right ${Off}`}
+                className={`carrousel-arrow-right ${off}`}
                 onClick={nextSlide}
             >
                 <i className="fa-solid fa-chevron-right"></i>
             </span>
             <div className="carrousel-slide-number">
-                <p className={Off}>
+                <p className={off}>
                     {currentSlide + 1}/{pictures.length}
                 </p>
             </div>
