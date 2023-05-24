@@ -28,13 +28,9 @@ export default function Carrousel({ pictures }) {
             >
                 <i className="fa-solid fa-chevron-left"></i>
             </span>
-            {pictures.map((picture, index) => (
-                <div key={index}>
-                    {index === currentSlide && (
-                        <img key={index} src={picture} alt="Image logement" />
-                    )}
-                </div>
-            ))}
+
+            <img src={pictures[currentSlide]} alt="Image logement" />
+
             <span
                 className={`carrousel-arrow-right ${off}`}
                 onClick={nextSlide}
